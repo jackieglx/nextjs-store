@@ -1,21 +1,11 @@
 import type {Metadata} from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from '@/components/navbar/Navbar';
 import Container from '@/components/global/Container';
 import Providers from "@/app/providers";
 import {ClerkProvider} from '@clerk/nextjs';
-
-const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
-});
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
-});
+import {Inter} from "next/dist/compiled/@next/font/dist/google";
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: "Next.js Store",
@@ -28,7 +18,7 @@ export default function RootLayout({children,}: Readonly<{
     return (
         <ClerkProvider>
             <html lang='en' suppressHydrationWarning>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+            <body className={inter.className}>
             <Providers>
                 <Navbar/>
                 <Container className='py-20'>
