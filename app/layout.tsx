@@ -4,7 +4,7 @@ import Navbar from '@/components/navbar/Navbar';
 import Container from '@/components/global/Container';
 import Providers from "@/app/providers";
 import {ClerkProvider} from '@clerk/nextjs';
-import {Inter} from "next/dist/compiled/@next/font/dist/google";
+import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
