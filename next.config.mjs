@@ -10,6 +10,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'cnpdzhauczhwysplitwr.supabase.co',
             },
+            {
+                protocol: 'https',
+                hostname: 'img.clerk.com',
+            },
         ],
     },
 };
